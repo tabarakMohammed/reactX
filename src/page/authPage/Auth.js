@@ -11,19 +11,17 @@ function Auth() {
     function clickHandler(e) {
         setItsLogin(itsLogin ? false : true);
       }  
-      let authLabel 
-      itsLogin ? authLabel = 'Login' : authLabel ='Register';
-      
+    
       return (
-        <body className="bk">
+        <div className="bk">
 
 
-<div className='borderAuth'>
+          <div className='borderAuth'>
          
          
          <div className='containerImage'>
          <img src={path} alt="yellowPin"  />
-         <button class="btn" onClick={clickHandler}>
+         <button className="btn" onClick={clickHandler}>
          {itsLogin? 'Register' : 'Login'}
          </button>
          </div>
@@ -34,15 +32,12 @@ function Auth() {
      
      
      {itsLogin ?<Login/> :<Register/>}
-      
-   <button className='authButton' type="submit" value="Submit" >
-   {authLabel}
-   </button>
+   
 
    </div>
 
       
-      </body>
+      </div>
     );
   }
   
