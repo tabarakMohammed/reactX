@@ -3,23 +3,14 @@ import '../../../App.css';
 
 function Login() {
     return (
-      <div className='borderAuth'>
       <form className='authForm' >
-    
-      <label>
-        email:
-        <input type="text" name="email" />
-      </label>
+        
+          <input className='authInput'  placeholder='Email'  type="text" name="email" />
+          <input className='authInput'  placeholder='Password'  type="password" name="password" />
+  
+         
+      </form>
 
-      <label>
-        password:
-        <input type="password" name="password" />
-     </label>
-
-       
-      <input type="submit" value="Submit" />
-    </form>
-    </div>
     );
   }
   

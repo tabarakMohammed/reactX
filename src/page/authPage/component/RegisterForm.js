@@ -1,21 +1,9 @@
 import '../../../App.css';
-import path from '../../../images/authImages/yellowPin.jpg';
 
 
 function Register() {
-  // let path='../../../images/authImages/yellowPin.jpg'
     return (
-          <div className='borderAuth'>
          
-         
-            <div className='containerImage'>
-            <img src={path} alt="yellowPin"  />
-            <button class="btn"> Login  </button>
-            </div>
-           
-            <div className='lineX'>
-                <span>OR</span>
-            </div>
         
         <form className='authForm' >
         
@@ -26,11 +14,6 @@ function Register() {
          
       </form>
 
-      <button className='authButton' type="submit" value="Submit" >
-      Register
-      </button>
-
-      </div>
     );
   }
   

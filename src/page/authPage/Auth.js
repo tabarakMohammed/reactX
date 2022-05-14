@@ -1,15 +1,47 @@
 import '../../App.css';
-//import Login from './component/Login';
+import Login from './component/Login';
 import Register from './component/RegisterForm';
-/**        <Login/> 
- */
+import React, { useState } from 'react';
+import path from '../../images/authImages/yellowPin.jpg';
+
 
 function Auth() {
-    return (
+    const [itsLogin,setItsLogin] = useState(false);
+    
+    function clickHandler(e) {
+        setItsLogin(itsLogin ? false : true);
+      }  
+      let authLabel 
+      itsLogin ? authLabel = 'Login' : authLabel ='Register';
+      
+      return (
         <body className="bk">
-      <div >
-       <Register/>
-      </div>
+
+
+<div className='borderAuth'>
+         
+         
+         <div className='containerImage'>
+         <img src={path} alt="yellowPin"  />
+         <button class="btn" onClick={clickHandler}>
+         {itsLogin? 'Register' : 'Login'}
+         </button>
+         </div>
+        
+         <div className='lineX'>
+             <span>OR</span>
+         </div>
+     
+     
+     {itsLogin ?<Login/> :<Register/>}
+      
+   <button className='authButton' type="submit" value="Submit" >
+   {authLabel}
+   </button>
+
+   </div>
+
+      
       </body>
     );
   }
