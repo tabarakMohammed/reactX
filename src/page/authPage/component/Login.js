@@ -25,6 +25,8 @@ function  sendToApi(formData){
 }
   
     return (
+
+      
       <form className='authForm' onSubmit={handelSave} >
         
           <input className='authInput'  placeholder='Email'  type="text" name="Email" 

@@ -1,6 +1,8 @@
 import '../../App.css';
 import Login from './component/Login';
 import Register from './component/RegisterForm';
+
+
 import React, { useState } from 'react';
 import path from '../../images/authImages/yellowPin.jpg';
 
@@ -16,6 +18,8 @@ function Auth() {
         <div className="bk">
 
 
+
+
           <div className='borderAuth'>
          
          
@@ -27,12 +31,11 @@ function Auth() {
          </div>
         
          <div className='lineX'>
-             <span>OR</span>
+             <span className='linXText'> OR </span>
          </div>
      
      
      {itsLogin ?<Login/> :<Register/>}
-   
 
    </div>
 

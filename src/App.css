@@ -44,33 +44,67 @@
 }
 
 .bk{
-  background: #2BC0E4;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #EEB703;
+/**
+background: -webkit-linear-gradient(to top, #8DB22F, #309F5C,#008476,#006675,  #2F4858);  /* Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to top, #8DB22F, #309F5C,#008476,#006675,  #2F4858); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   min-height: 100vh;
+
+}
+
+.bk:before {
+  content: ' ';
+  border-top: 100vh solid  #DFE0DF; 
+  border-left: 100vw solid transparent;
+  width: 0;
+  position: absolute;
 }
 
 
 .borderAuth{
   position: absolute;
 
-  margin: 1%;
+  margin: 0 auto;
   text-align: center;
 
   border: #FFFF 1px solid;
-  box-shadow:  2px 2px  10px 10px   #888888;
+  box-shadow:  0px 0px  2.5px 0.5px   #888888;
   top: 5%;
   left: 35%;
  
   height: 90%;
   width: 30%;
   z-index: 10;
-background-color: #FFFF;
+background-color: #DFE0DF;
 }
 
 .authForm{
-  margin-top: 5%;
+  margin-top: 15%;
+  animation: fade 0.3s linear;
+}
+
+
+@keyframes fade {
+  from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+  
+  /* 0% { 
+    transform-origin: right top;
+    transform: rotate(30deg); 
+    opacity: 0; 
+ }
+ 100% { 
+    transform-origin: left top ; 
+    transform: rotate(-90); 
+    opacity: 1; 
+ } */
 }
 
 .authInput{
@@ -80,49 +114,55 @@ background-color: #FFFF;
   width: 80%;
   align-items: center;
   text-align: center;
-  margin: 1%;
+  margin: 3.5%;
   margin-left: 7.7%;
-  border: #F2F2F2 2.5px solid;
+  border: #474554 0px solid;
   border-radius: 5px;
   padding: 2.5%;
+  background-color: #DFE0DF;
 }
 
 ::placeholder {
-  color: 383838;
+  color: #474554;
   font-size: 1em;
   font-style: Bold;
-
 }
 
 input:focus {
-  background-color: #EAECC6;
   outline: none !important;
   border:1px solid #EAECC6;
-    border-radius: 5px;
+  border-radius: 5px;
   box-shadow: 0 0 10px #719ECE;
 }
 
 .authButton{
+  
   padding: 2.5%;
   width: 50%;
-  background-color: #555;
+  background-color: #474554;
   align-items: center;
   text-align: center;
-  margin: 5%;
-  margin-left: 10%;
-  border:  rgb(206, 198, 198) 2px solid;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
   border-radius: 5px;
-  color: white;
-  font-size: 16px;
+  color: #DFE0DF;
+  font-size: 16px
+  
 }
 
 .authButton:hover {
   background-color: #719ECE;
 }
 
+.linXText{
+  color: #474554;
+  font-size: 1em;
+  font-style: Bold;
 
+}
 .lineX {
-  margin-top: 5%;
+  margin-top: 0%;
   margin-left: 2%;
   margin-right: 2%;
   display: block;
@@ -144,7 +184,7 @@ input:focus {
   width: 9999px;
   height: 1px;
   padding: 1px;
-  background-color: #719ECE;
+  background-color: #474554;
 
 }
 
@@ -166,9 +206,10 @@ input:focus {
 }
 
 .containerImage img {
+  transform: translate(-0.2%,-0.5%);
+
   height: 50%;
-  width: 100%;
-  box-shadow:  0px 0px 30px rgba(0,0,0,0.9);
+  width: 100.9%;
 }
 
 .containerImage .btn {
@@ -177,8 +218,8 @@ input:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
+  background-color: #DFE0DF;
+  color: #555;
   font-size: 16px;
   padding: 12px 24px;
   border: none;
@@ -189,5 +230,12 @@ input:focus {
 .containerImage .btn:hover {
   background-color: #719ECE;
 }
+
+
+
+
+
+
+
 
 

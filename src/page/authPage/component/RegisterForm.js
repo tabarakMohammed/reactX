@@ -42,9 +42,9 @@ function Register() {
            value={formData.password}/>
   
             
-   <button className='authButton' type="submit" >
-       Register
-   </button>
+         <button className='authButton' type="submit" >
+              Register
+          </button>
       </form>
 
     );
