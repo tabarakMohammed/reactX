@@ -1,41 +1,42 @@
-import logo from '../../logo.svg';
-import '../../App.css';
+import './homeCss/home.css';
+import Card from './component/card';
+import InputCardname from './component/inputCard';
+import TableCard from './component/tableCard';
 
-
-
-function Header(){
-  return (
-    <header >
-    <img src={logo} className="img"  alt="logo" />
-   </header>
-  )
-}
-
-function Pecture(){
- return(
-    <div>
-      <img src="/img/" alt="img" />
-    </div>
- )
-
-}
-
-function Text(){
-  return(
-     <div>
-       <p>gggggggggggggggggggggggggggggg</p>
-     </div>
-  )
- 
- }
+import infoBank from './informationBank';
 
 function App() {
+  console.log(infoBank);
+
+  
+
   return (
-    <div className="App">
-       <Header/>
-       <Pecture/>
-       <Text/>
-    </div>
+    <div className='bkk'>
+   {
+       infoBank.map(items => 
+        
+        !items.hasElement? 
+        
+        <Card
+         name = {items.name}
+         hasElement={items.hasElement}
+         TextContianit={items.TextContianit}/>
+        
+         : (items.hasElement === "input")?
+       
+         <InputCardname 
+         name= {items.name}
+         TextContianit={items.TextContianit}/>
+
+         : <TableCard name = {items.name}
+         hasElement={items.hasElement}
+         TextContianit={items.TextContianit}/>
+      )
+   }
+ 
+   </div>
+
+   
   );
 }
 
