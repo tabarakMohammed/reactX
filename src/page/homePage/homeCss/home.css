@@ -41,8 +41,8 @@
     max-width: 100%;
     max-height: 60%;
     min-width: 100%;
-    min-height: 60%;
-    top: 30%;
+    min-height: 70%;
+    top: 15%;
     border-bottom: 0.25em solid #DFE0DF;
     overflow:  scroll;
     margin-left: auto;
@@ -52,7 +52,7 @@
 
     .cardFotter{
       position: absolute;
-      top: 90%;
+      top: 88%;
       max-width: 100%;
       height: 30%;
       min-width: 100%;
@@ -85,9 +85,10 @@
   margin: 0 auto;
   border: none;
   cursor: pointer;
-
   color: #DFE0DF;
-  font-size: 10px
+  font-size: 17px;
+  font:  small-caps bold cursive;    
+
   
 }
 
@@ -95,4 +96,51 @@
   background-color: #719ECE;
 }
 
+textarea { height: auto; }
+
+
+.slideContiner{
+  margin: 5px auto;
+  position: absolute;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8; 
+}
+.btnSlideLeft{
+   margin-left: 5%;
+   right: 90%;
+}
+
+.btnSlideRight{
+  margin-right: 5%;
+  left: 90%;
+}
+
+.btnSlideLeftMid{
+ position: absolute;
+  z-index: 8;
+  top: 35%;
+  margin-right: 5%;
+  left: 95%;
+}
+
+.btnSlideRightMid{
+  position: absolute;
+  z-index: 8;
+  top: 35%;
+  margin-right: 5%;
+  right: 90%;
+}
+
+.textContiner{
+  left: 40%;
+  top: 20%;
+  z-index: 9;
+  
+}
+
+
+
   /* #A48E65 */
+

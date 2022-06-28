@@ -2,16 +2,20 @@ import './homeCss/home.css';
 import Card from './component/card';
 import InputCardname from './component/inputCard';
 import TableCard from './component/tableCard';
+import  NavBar from '../../GeneralComponent/navbar'
 
 import infoBank from './informationBank';
-
 function App() {
   console.log(infoBank);
 
   
 
   return (
-    <div className='bkk'>
+    
+    <div>
+          
+           <NavBar/>
+      <div  className='bkk' >
    {
        infoBank.map(items => 
         
@@ -35,7 +39,7 @@ function App() {
    }
  
    </div>
-
+   </div>
    
   );
 }

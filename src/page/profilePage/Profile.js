@@ -1,11 +1,16 @@
 
+import  NavBar from '../../GeneralComponent/navbar'
 
 import '../../App.css';
 
 function Profile() {
     return (
-      <div className="App">
-       users 
+      <div>
+        <NavBar/>
+        <div className="App">
+          Profile
+          </div>
+        
       </div>
     );
   }
