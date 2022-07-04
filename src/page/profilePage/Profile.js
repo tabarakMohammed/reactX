@@ -7,7 +7,7 @@ function Profile() {
     return (
       <div>
         <NavBar/>
-        <div className="App">
+        <div className="bkk">
           Profile
           </div>
         

@@ -3,39 +3,60 @@ import Card from './component/card';
 import InputCardname from './component/inputCard';
 import TableCard from './component/tableCard';
 import  NavBar from '../../GeneralComponent/navbar'
+import React from 'react';
 
 import infoBank from './informationBank';
 function App() {
-  console.log(infoBank);
 
-  
+  const [openModal, setClose] = React.useState(false);
 
+const onOpen = () => {
+  setClose((prevActiveStep) => prevActiveStep ? false : true);
+};
+
+console.log(openModal);
   return (
     
     <div>
           
            <NavBar/>
       <div  className='bkk' >
+       
    {
        infoBank.map(items => 
         
-        !items.hasElement? 
+        openModal? 
+        <div > 
+          {items.hasElement === "input"?'' : items.hasElement}
+             { items.hasElement && items.hasElement !== "input" ? 
+           <button className='backButton' onClick={onOpen}> رجوع </button>
+           : ''
+             }
+        </div>
+          :
+          
+        !items.hasElement ?
         
         <Card
          name = {items.name}
          hasElement={items.hasElement}
-         TextContianit={items.TextContianit}/>
+         TextContianit={items.TextContianit}
+        />
         
-         : (items.hasElement === "input")?
+         : (items.hasElement === "input") ?
        
          <InputCardname 
          name= {items.name}
          TextContianit={items.TextContianit}/>
 
-         : <TableCard name = {items.name}
+         :  <TableCard name = {items.name}
          hasElement={items.hasElement}
-         TextContianit={items.TextContianit}/>
+         TextContianit={items.TextContianit}
+         statusModal={onOpen} 
+         /> 
+
       )
+      
    }
  
    </div>

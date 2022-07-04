@@ -18,6 +18,16 @@ const goToPrevPicture = () => {
   setActiveStep((prevActiveStep) => prevActiveStep - 1);
 };
 
+var constIndex =[];
+for(var i = 0 ; i <= contianitSize-1 ; i++) {
+ constIndex.push({id : i})
+}
+
+function goTospecifyPicture(id) {
+ setActiveStep(id);
+}
+
+
 
   return (
     <div className="card">
@@ -47,28 +57,35 @@ const goToPrevPicture = () => {
 
 
 
-       <button className='btnSlideRightMid' onClick={goToPrevPicture}
+       <button className='btnSlideRightMid btnSlideMid' onClick={goToPrevPicture}
                      disabled={index === 0 }
-                     > &larr;  
+                     >&#171; 
                      </button>
-       <button className='btnSlideLeftMid' onClick={goToNextPicture}
+         
+
+
+
+       <button className='btnSlideLeftMid btnSlideMid' onClick={goToNextPicture}
                       disabled={index === contianitSize - 1}
-                      >&rarr;
+                      >&#187;
                      </button>   
        </div>
       
-       <footer className='cardFotter center'>
+       <footer className='cardFotter '>
      
-       <button className='btnSlideRight' onClick={goToPrevPicture}
-                     disabled={index === 0 }
-                     > &larr;  </button>
-       <button className='btnSlideLeft'
-              onClick={goToNextPicture}
-              disabled={index === contianitSize - 1}
-            >
-               &rarr;
-           
-            </button>   
+                  
+            {
+                constIndex.map(val => (
+                 
+                  <div className='btnchean btncheanstyle' id={val.id}
+                    onClick={fun =>  goTospecifyPicture(val.id)} >
+                       {val.id} 
+                    </div>
+                     
+                ))
+
+            }
+
        </footer>
  
     </div>

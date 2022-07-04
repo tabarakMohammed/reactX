@@ -45,7 +45,7 @@ function InputCard(prop) {
          
           <form className='authForm' onSubmit={handelSave} >
             
-            <textarea rows="7" className='authInput'  placeholder='رسالة'  type="text" name="message" 
+            <textarea rows="7" className=''  placeholder='رسالة'  type="text" name="message" 
           onChange={handelEvenetChanged} 
           value={formData.message}/>
         

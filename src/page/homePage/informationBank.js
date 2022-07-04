@@ -2,7 +2,7 @@
 
 
 
-export  const infoBank = [{'name':'أعلان الأستاذ',
+export  const infoBank = [{'name':'أعلان المدرسة',
 'hasElement':false,
 'TextContianit':[
    {
@@ -12,34 +12,42 @@ export  const infoBank = [{'name':'أعلان الأستاذ',
    {
      label: "Second Picture",
      imgPath:
- "https://media.geeksforgeeks.org/wp-content/uploads/20210208000009/2.png",
+ "https://static.vecteezy.com/system/resources/thumbnails/002/399/943/small/happy-kids-studying-and-learning-vector.jpg",
    },
    {
      label: "Third Picture",
      imgPath:
- "https://media.geeksforgeeks.org/wp-content/uploads/20210208000008/3.png",
+ "https://static.vecteezy.com/system/resources/previews/002/407/642/non_2x/happy-kids-studying-and-learning-vector.jpg",
    },
  ]
 },
 
 {'name':'جدول ألأسبوع', 
-'hasElement':<table className='cardText center'> 
-   <tr> <td>Emil</td><td>Tobias</td><td>Linus</td></tr><tr><td>16</td><td>14</td><td>10</td></tr></table>,
+'hasElement':<table className='cardText center  table' > 
+
+   <tr> <td>الخميس</td>  <td>الأربعاء</td> <td>الثلاثاء</td> <td>الاثنين</td> <td>الأحد</td> <td>الوقت</td>  </tr>
+      <tr><td>x</td><td>x</td><td>f</td>   <td>t</td><td>d</td><td>8:00</td></tr>
+      <tr><td>s</td><td>d</td><td>t</td>   <td>d</td><td>f</td><td>8:45</td></tr>
+      <tr><td>a</td><td>c</td><td>t</td>  <td>c</td><td>x</td><td>9:45</td></tr>
+      <tr><td>e</td><td>r</td><td>c</td>   <td>d</td><td>c</td><td>11:00</td></tr>
+      <tr><td>r</td><td>f</td><td>v</td>   <td>t</td><td>a</td><td>11:45</td></tr>
+
+   </table>,
    },
 
-{'name':'أعلان المدرسة','hasElement':false, 'TextContianit':[
+{'name':'ملاحظات الأستاذ','hasElement':false, 'TextContianit':[
    {
-     label: "غدا عطله",
+     label: "أستاذ مدثر التاريخ",
      describtion:
-    " test"  },
+    "الأحد أمتحان صف السادس 6/1"   },
    {
-     label: "Second Picture",
-     describtion:" test",
+     label: "أستاذ صفاء أنكليزي",
+     describtion:" happy day",
    },
    {
-     label: "Third Picture",
+     label: "أستاذ حسام رياضة",
      describtion:
-     " test",
+     " جيبو وياكم تراكسودات ملابس رياضة",
    },
  ]
 },

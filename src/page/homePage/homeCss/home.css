@@ -1,6 +1,9 @@
 
   .bkk{
-  background: #DFE0DF;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   position: relative;
   min-height: 100vh;
   margin: 0 auto;
@@ -14,8 +17,8 @@
   width: 250px;
   min-width: 40%;
   min-height: 300px;
-  background-color: #FEF9F0;
-  border-radius: 0.25rem;
+  background-color: #DAECE7;
+  border-radius: 3%;
   margin-top: 3%;
   margin-left: 5%;
   margin-right: 5%;
@@ -32,7 +35,7 @@
   width: 100%;
   height: 15%;
   top: 0% auto;
-  border-bottom: 0.25em solid #DFE0DF;
+  border-bottom: 0.25em solid #2193B0;
   overflow:  hidden;
   }
 
@@ -43,7 +46,7 @@
     min-width: 100%;
     min-height: 70%;
     top: 15%;
-    border-bottom: 0.25em solid #DFE0DF;
+    border-bottom: 0.25em solid #2193B0;
     overflow:  scroll;
     margin-left: auto;
     margin-right: auto;
@@ -58,6 +61,7 @@
       min-width: 100%;
       height: 20%;
 
+
       }
 
     ::-webkit-scrollbar {
@@ -66,7 +70,7 @@
 
   .cardText{
     font: italic small-caps bold 15px/2 cursive;    
-    color: #A48E65;
+    color: #474554;
   }
 
   .center {
@@ -80,23 +84,40 @@
 
   padding: 1%;
   width: 20%;
-  background-color: #474554;
+  background-color: #2193B0;
   text-align: center;
   margin: 0 auto;
   border: none;
   cursor: pointer;
-  color: #DFE0DF;
+  color: #E6F4F1;
   font-size: 17px;
-  font:  small-caps bold cursive;    
-
+  font:  small-caps bold bold;    
+   border-radius: 5%;
   
 }
 
 .messageButton:hover {
-  background-color: #719ECE;
+  background-color: #474554;
 }
 
-textarea { height: auto; }
+textarea {   
+  display: flex; 
+  flex-direction:row;
+  height : auto;
+  width: 80%;
+  align-items: center;
+  text-align: center;
+  margin: 3.5%;
+  margin-left: 7.7%;
+  border: #474554 0px solid;
+  border-radius: 3%;
+  padding: 2.5%;
+  background-color: #2193B0;
+  color: #E6F4F1;
+
+
+}
+textarea:hover { outline: #719ECE 3px solid; }
 
 
 .slideContiner{
@@ -107,14 +128,15 @@ textarea { height: auto; }
   height: 100%;
   opacity: 0.8; 
 }
-.btnSlideLeft{
-   margin-left: 5%;
-   right: 90%;
-}
 
-.btnSlideRight{
-  margin-right: 5%;
-  left: 90%;
+
+.btnSlideMid{
+  border: none;
+  background-color: Transparent;
+  box-shadow: #474554 1px;
+  font-size: larger;
+  font:bolder;
+  color: #474554;
 }
 
 .btnSlideLeftMid{
@@ -125,13 +147,34 @@ textarea { height: auto; }
   left: 95%;
 }
 
+.btnSlideLeftMid:hover{
+
+  border-bottom: #719ECE 2px solid;
+  border-top: #719ECE 2px solid;
+  border-left: #719ECE 2px solid;
+  border-radius:  20px 0 0 0px ;
+
+}
+
 .btnSlideRightMid{
   position: absolute;
   z-index: 8;
   top: 35%;
   margin-right: 5%;
   right: 90%;
+ 
 }
+
+.btnSlideRightMid:hover{
+
+  border-bottom:  #719ECE 2px solid;
+  border-top: #719ECE 2px solid;
+  border-right: #719ECE 2px solid;
+/* top-left | top-right | bottom-right | bottom-left */
+border-radius: 0 20px 0 0;
+}
+
+
 
 .textContiner{
   left: 40%;
@@ -139,8 +182,56 @@ textarea { height: auto; }
   z-index: 9;
   
 }
+ 
+.btnchean{
+display: inline-block;
+margin-left: 1%;
+margin-right: 1%;
+}
+
+.btncheanstyle{
+
+color: #A48E65;
+
+cursor: pointer;
+overflow:  scroll;
+
+}
+
+ tr ,th, td{
+  padding: 5px;
+  border-bottom: #474554 1px solid;
+
+  }
+
+ .open{
+  display: block;
+ }
+ .close{
+  display: none;
+ }
+  
 
 
+ 
+.backButton{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  width: 8%;
+  background-color: #2193B0;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  color: #DFE0DF;
+  font-size: 16px;
+  font:  small-caps bold bold;    
+   border-radius: 5%;
+   padding: 0.5%;
+   text-align: center;  
+}
 
+.backButton:hover{ background-color: #474554;}
   /* #A48E65 */
 

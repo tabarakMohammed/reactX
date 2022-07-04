@@ -15,7 +15,7 @@ function NavBar() {
           <div className="nav-container">
               
             <a  href="/"   className={click ? "nav-logo active" : "nav-logo"}  >
-              Tabarek Schoole
+             مدرسة تبارك
               <i className="fas fa-code"></i>
             </a >
   
@@ -23,7 +23,7 @@ function NavBar() {
               <li className="nav-item">
                 <NavLink
                   href="/"
-                  name = "Home"
+                  name = "الرئيسية"
                   active ={click}
                   activeClassName="nav-links active"
                   className="nav-links"
@@ -34,7 +34,7 @@ function NavBar() {
               <li className="nav-item">
                 <NavLink
                  href="/users"
-                 name = "users"
+                 name = "الطلاب و المدرسين"
                   activeClassName="nav-links active"
                   className="nav-links"
                   onClick={handleClick}
@@ -45,7 +45,7 @@ function NavBar() {
               <li className="nav-item">
                 <NavLink
                  href="/profile"
-                 name = "profile"
+                 name = "الملف الشحصي"
                   activeClassName="nav-links active"
                   className="nav-links"
                   onClick={handleClick}
@@ -56,7 +56,7 @@ function NavBar() {
               <li className="nav-item">
                 <NavLink
                  href="/login"
-                 name = "login"
+                 name = "تسجيل دخول"
                   activeClassName="nav-links active"
                   className="nav-links"
                   onClick={handleClick}
