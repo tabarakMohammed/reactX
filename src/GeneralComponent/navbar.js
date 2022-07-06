@@ -11,7 +11,7 @@ function NavBar() {
     return (
      
 
-        <nav className="navbar">
+        <nav className="navbar"  dir="rtl">
           <div className="nav-container">
               
             <a  href="/"   className={click ? "nav-logo active" : "nav-logo"}  >
@@ -45,7 +45,7 @@ function NavBar() {
               <li className="nav-item">
                 <NavLink
                  href="/profile"
-                 name = "الملف الشحصي"
+                 name = "الملف الشخصي"
                   activeClassName="nav-links active"
                   className="nav-links"
                   onClick={handleClick}
@@ -69,7 +69,7 @@ function NavBar() {
 
             <div className="nav-icon" onClick={handleClick}>
             <i>          
-                menu
+                قائمة الانتقال
            </i>
 
           

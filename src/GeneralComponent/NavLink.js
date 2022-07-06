@@ -9,7 +9,7 @@ function NavLink(props) {
       
          <div onClick={props.onClick} >
            <a className={act ?  props.activeClassName : props.className } href={props.href}>
-              {props.name} 
+             {props.name}  
            </a>
         </div>
 

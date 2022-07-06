@@ -112,8 +112,8 @@ textarea {
   border: #474554 0px solid;
   border-radius: 3%;
   padding: 2.5%;
-  background-color: #2193B0;
-  color: #E6F4F1;
+  background-color: #C2F9FF;
+  color: #474554;
 
 
 }
@@ -199,8 +199,8 @@ overflow:  scroll;
 }
 
  tr ,th, td{
-  padding: 5px;
-  border-bottom: #474554 1px solid;
+  /* padding: 5px;
+  border-bottom: #474554 1px solid; */
 
   }
 
