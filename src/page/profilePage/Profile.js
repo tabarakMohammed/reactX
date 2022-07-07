@@ -21,7 +21,7 @@ function Profile() {
     return (
       <div dir="rtl">
         <NavBar/>
-        <div className="bak">
+        <div className="bkk">
 
           
         { user.map(items => 
