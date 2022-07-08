@@ -6,20 +6,11 @@ function TableCard(prop) {
     let label = prop.name;
 
 
-    
-// const [openModal, setClose] = React.useState(false);
-
-// const onOpen = () => {
-//   setClose((prevActiveStep) => prevActiveStep ? false : true);
-// };
-// const goToPrevPicture = () => {
-//   setClose((prevActiveStep) => prevActiveStep - 1);
-// };
-
+  
 
 return (
     <div className="card">
-      {/* <div className={openModal ? 'open' : 'close'} > modal ... </div> */}
+
        <div className='cardTitle center'>
          <header>
          <p className='cardText'>

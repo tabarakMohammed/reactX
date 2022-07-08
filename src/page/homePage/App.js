@@ -26,8 +26,11 @@ console.log(openModal);
        infoBank.map(items => 
         
         openModal? 
-        <div > 
+        <div>
+           <div className='fontcolor'> 
           {items.hasElement === "input"?'' : items.hasElement}
+          </div>
+
              { items.hasElement && items.hasElement !== "input" ? 
            <button className='backButton' onClick={onOpen}> رجوع </button>
            : ''

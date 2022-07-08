@@ -14,7 +14,12 @@
 }
 
 .imageCard:hover{
-  border: 0.25em solid #DAECE7 ;
+  border: 0.25em solid  #2193b0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+  
   transform: translateX(-4px);
   box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
 }
@@ -44,8 +49,12 @@
     width: 80%;
     min-width: 90%;
     min-height: 40%;
-    background-color: #DAECE7;
-    margin-top: 0.5%;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+        margin-top: 0.5%;
     margin-right: 5% ;
     margin-left: 0 auto;
     user-select: none;
@@ -140,8 +149,12 @@ margin-bottom: 3%;
     width: 80%;
     min-width: 90%;
     min-height: 60%;
-    background-color: #DAECE7;
-    margin-top: 0.5%;
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+        margin-top: 0.5%;
     margin-right: 5% ;
     margin-left: 0 auto;
     user-select: none;

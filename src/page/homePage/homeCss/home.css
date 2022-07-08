@@ -17,8 +17,10 @@
   width: 250px;
   min-width: 40%;
   min-height: 300px;
-  background-color: #DFE0DF;
-  border-radius: 3%;
+background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ border-radius: 3%;
   margin-top: 3%;
   margin-left: 5%;
   margin-right: 5%;
@@ -70,7 +72,7 @@
 
   .cardText{
     font: italic small-caps bold 15px/2 cursive;    
-    color: #474554;
+    color: white;
   }
 
   .center {
@@ -112,7 +114,7 @@ textarea {
   border: #474554 0px solid;
   border-radius: 3%;
   padding: 2.5%;
-  background-color: #ABABAB;
+  background-color: #f3f3f3;
   color: #474554;
 
 
@@ -136,7 +138,7 @@ textarea:hover { outline: #719ECE 3px solid; }
   box-shadow: #474554 1px;
   font-size: larger;
   font:bolder;
-  color: #474554;
+  color: white;
 }
 
 .btnSlideLeftMid{
@@ -190,13 +192,23 @@ margin-right: 1%;
 }
 
 .btncheanstyle{
-
-color: #A48E65;
-
+color: white;
 cursor: pointer;
 overflow:  scroll;
-
 }
+
+.fontcolor{
+  background: #2193b0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+ 
+ 
+}
+
+
 
  tr ,th, td{
   /* padding: 5px;
