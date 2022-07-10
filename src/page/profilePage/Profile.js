@@ -5,25 +5,40 @@ import PersonalCard from './component/PersonalCard'
 import CurrentInformation from './component/CurrentInformation'
 import HistoryInformation from './component/HistoryInformation'
 import tables from './component/tables'
-import React from 'react';
-
-var user = [{ "id":1, "name":"ahmed", "type":"student" }]
+import React,{useContext} from 'react';
+import {globalState} from '../../GeneralComponent/globalState'
+import jwt_decode from "jwt-decode";
+var user = []
 
 
 
 function Profile() {
-
+  const {token} = useContext(globalState);
   const [idcheck, setId] = React.useState({table:"",title:""});
 
- 
    
+if(token !== "" ){
+  const decoded = jwt_decode(token.token);
+  console.log(decoded); 
+  user=[{
+    "id":decoded.user_id,
+    "name":decoded.user_name,
+    "type":decoded.userType
+  }]
+  
+}
+
+
+
+
+
 
     return (
       <div dir="rtl">
         <NavBar/>
         <div className="bkk">
 
-          
+     
         { user.map(items => 
           
           <PersonalCard

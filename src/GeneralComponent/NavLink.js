@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 
+ 
 
 function NavLink(props) {
 
@@ -7,11 +9,12 @@ function NavLink(props) {
           if(pathname === props.href ){act = true}
     return(
       
-         <div onClick={props.onClick} >
-           <a className={act ?  props.activeClassName : props.className } href={props.href}>
+         <nav onClick={props.onClick} >
+           <Link className={act ?  props.activeClassName : props.className } to={props.href}>
              {props.name}  
-           </a>
-        </div>
+           </Link>
+
+        </nav>
 
     );
 }

@@ -1,33 +1,48 @@
-import React, { useState } from 'react';
-
+import React, { useState , useContext} from 'react';
+import {globalState} from './globalState'
 import "./navbar.css";
 import NavLink from './NavLink';
+import { Link } from "react-router-dom";
 
 
 function NavBar() {
+
+  const {token,settoken} = useContext(globalState);
+
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     console.log(click);
+    
     return (
      
 
         <nav className="navbar"  dir="ltr">
           <div className="nav-container">
               
-            <a  href="/"   className={click ? "nav-logo active" : "nav-logo"}  >
+            <Link  to="/"   className={click ? "nav-logo active" : "nav-logo"}  >
               <i className="fas fa-code"></i>
-            </a >
+            </Link >
   
             <ul className={click ? "nav-menu active" : "nav-menu"}>
-
+             
             <li className="nav-item">
+              { token === '' ?
                 <NavLink
                  href="/login"
                  name = "تسجيل دخول"
                   activeClassName="nav-links active"
                   className="nav-links"
                   onClick={handleClick}
-                />
+                /> :
+                <NavLink
+                
+                href="/login"
+                name = "تسجيل خروج"
+                 activeClassName="nav-links active"
+                 className="nav-links"
+                 onClick={() => {settoken('')}}
+               /> 
+              } 
                   
                 
               </li>

@@ -1,8 +1,12 @@
 import '../../../App.css';
 import React, { useState } from 'react';
 
+function Register(prop) {
 
-function Register() {
+ 
+
+  const [message,setMsg] = useState('')
+
 
     const [formData,setFormData] = useState(
         {name:"",userType:"Student", password: ""}
@@ -20,10 +24,37 @@ function Register() {
       e.preventDefault();
       sendToApi(formData);
     }
-    
+   
     function sendToApi(formData){
-      console.log(formData);
+      setMsg('...')
+
+// console.log(formData)
+
+      fetch("http://127.0.0.1:8080/auth/reg", {
+        method: "POST",
+        body: JSON.stringify({
+          username:  formData.name,
+          password: formData.password,
+          usertype: formData.userType
+        })
+      })
+        .then(res => {
+          if (res.ok) {
+            return res;
+          } else {
+            setMsg(res.statusText);
+            throw Error( "error: " + res.statusText);
+          }
+        })
+        .then(json => {
+          window.location.reload(false);
+
+        //  navigate( '/login');
+        })
+        .catch(error => console.error(error));
+
     }
+    
 
 
     return (
@@ -52,6 +83,10 @@ function Register() {
          <button className='authButton' type="submit" >
               Register
           </button>
+          { message === "..." ?
+           <p className='spinnerX' ></p> :
+          <p>{message}</p>
+          }
       </form>
 
     );

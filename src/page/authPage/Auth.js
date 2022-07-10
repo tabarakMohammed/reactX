@@ -1,5 +1,5 @@
 import '../../App.css';
-import Login from './component/Login';
+import Login from './component/LoginForm';
 import Register from './component/RegisterForm';
 
 
@@ -8,7 +8,7 @@ import path from '../../images/authImages/yellowPin.jpg';
 
 
 function Auth() {
-    const [itsLogin,setItsLogin] = useState(false);
+    const [itsLogin,setItsLogin] = useState(true);
     
     function clickHandler(e) {
         setItsLogin(itsLogin ? false : true);
@@ -35,7 +35,7 @@ function Auth() {
          </div>
      
      
-     {itsLogin ?<Login/> :<Register/>}
+     {itsLogin ?<Login/> :<Register goLogin = {clickHandler}/>}
 
    </div>
 
